@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ContactItem = ({ contact }) => {
-  const { _id, name, email, phone, type } = contact;
+  const { id, name, email, phone, type } = contact;
 
   return (
     <div className="card bg-light">
@@ -32,8 +32,8 @@ const ContactItem = ({ contact }) => {
         )}
       </ul>
       <p>
-        <button className="button.btn.btn-dark btn-sm">Edit</button>
-        <button className="button.btn.btn-danger btn-sm">Delete</button>
+        <button className="btn btn-dark btn-sm">Edit</button>
+        <button className="btn btn-danger btn-sm">Delete</button>
       </p>
     </div>
   );
