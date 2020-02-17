@@ -31,14 +31,14 @@ const AuthState = props => {
   const loadUser = () => console.log('loaduser');
 
   //Register User
-  const register = async FormData => {
+  const register = async formData => {
     const config = {
       headers: {
         'Content-Type': 'application/json'
       }
     };
     try {
-      const res = await axios.post('/api/auth');
+      const res = await axios.post('/api/users', formData, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -62,7 +62,7 @@ const AuthState = props => {
 
   //Clear Errors
 
-  const clearErrors = () => console.log('clearerror');
+  const clearErrors = () => dispatch({ type: CLEAR_ERRORS });
 
   return (
     <AuthContext.Provider
